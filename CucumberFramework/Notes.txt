@@ -5,12 +5,23 @@ Q1. What is automation Framework ?
 Q2. What is TestNG ?
 
 Q3. What is Maven ?
+- Build management Tool
+- Creaet Cucumber or automation framework
+
 
 Q4. What is the POM File ?
+- XML File
+- Contains info about the project
+- Heart of Maven project
+- List of all dependencies to download from the web to get project running
+- Easily allows us the download project versions
 
-Q. What makes TestNG different from JUnit ?
+Q4b. What is dependency ?
+- Tool that allows to manage all libraries in a logical way
 
-Q. What do you need to download before starting ?
+Q5. What makes TestNG different from JUnit ?
+
+6. What do you need to download before starting ?
 - Java SDK
 - Apache Maven
 - Set up Environment variables for Windows  / Set up bash_profile for Mac
@@ -19,7 +30,7 @@ Q. What do you need to download before starting ?
 - Download Cucumber, Natural 0.9
 - Download ChromeDriver 
 
-Q. How to create a maven project ? 
+7. How to create a maven project ? 
 - Go Create new Project
 - Go to "Other.."
 - Go to Maven > Create Maven Project
@@ -30,4 +41,12 @@ Q. How to create a maven project ?
 - Package: NameOfApp (Remove com.XYZ)
 - Click on Finish
 
-Q. You will need to download Chromedriver & ChromeBrowser
+8. You will need to download Chromedriver & ChromeBrowser
+
+9. How to test if Maven Project is running correctly /
+- Go to project
+- Right click on project 
+- Run As > Maven  Install
+- If it works, you should see build succcessful
+
+10. 

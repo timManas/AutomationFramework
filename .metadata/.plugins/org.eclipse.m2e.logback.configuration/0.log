@@ -156,3 +156,15 @@ Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: Duplicated 
 2021-01-03 19:17:42,597 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/timmanas/ProgrammingProjects/CucumberFramework/CucumberFramework/src/main/resources
 2021-01-03 19:17:42,607 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2021-01-03 19:17:42,607 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/timmanas/ProgrammingProjects/CucumberFramework/CucumberFramework/src/test/resources
+2021-01-03 19:31:34,234 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-03 19:31:34,235 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/timmanas/ProgrammingProjects/CucumberFramework/CucumberFramework/src/main/resources
+2021-01-03 19:31:34,237 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-03 19:31:34,237 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/timmanas/ProgrammingProjects/CucumberFramework/CucumberFramework/src/test/resources
+2021-01-03 19:33:32,693 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-03 19:33:32,693 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/timmanas/ProgrammingProjects/CucumberFramework/CucumberFramework/src/main/resources
+2021-01-03 19:33:32,695 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-03 19:33:32,695 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/timmanas/ProgrammingProjects/CucumberFramework/CucumberFramework/src/test/resources
+2021-01-03 19:38:02,469 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-03 19:38:02,469 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/timmanas/ProgrammingProjects/CucumberFramework/CucumberFramework/src/main/resources
+2021-01-03 19:38:02,482 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-03 19:38:02,482 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/timmanas/ProgrammingProjects/CucumberFramework/CucumberFramework/src/test/resources
