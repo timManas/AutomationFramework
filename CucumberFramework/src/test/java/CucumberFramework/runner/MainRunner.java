@@ -12,7 +12,7 @@ import cucumber.api.junit.Cucumber;
 		glue = {"CucumberFramework.steps"},
 		monochrome = true,
 		tags = {}, 
-		plugin = {"pretty", "html:target/cucumber", "html:target/cucumber.json"})
+		plugin = {"pretty", "html:target/cucumber", "html:target/cucumber.json", "com.cucumber.listener.ExtentCucumberFormatter:target/report.html"})
 
 public class MainRunner {
 

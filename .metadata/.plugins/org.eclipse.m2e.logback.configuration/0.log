@@ -2223,3 +2223,31 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact velocity-tool
 2021-01-03 23:57:36,578 [Worker-55: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/timmanas/ProgrammingProjects/CucumberFramework/CucumberFramework/src/main/resources
 2021-01-03 23:57:36,579 [Worker-55: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2021-01-03 23:57:36,579 [Worker-55: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/timmanas/ProgrammingProjects/CucumberFramework/CucumberFramework/src/test/resources
+2021-01-04 00:02:27,885 [Worker-58: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.automationframework:CucumberFramework:0.0.1-SNAPSHOT @ /Users/timmanas/ProgrammingProjects/CucumberFramework/CucumberFramework/pom.xml.
+2021-01-04 00:02:28,475 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-04 00:02:28,475 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/timmanas/ProgrammingProjects/CucumberFramework/CucumberFramework/src/main/resources
+2021-01-04 00:02:28,490 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-04 00:02:28,490 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/timmanas/ProgrammingProjects/CucumberFramework/CucumberFramework/src/test/resources
+2021-01-04 00:02:37,365 [Worker-52: Launching Executing clean in _Users_timmanas_ProgrammingProjects_CucumberFramework_CucumberFramework] INFO  o.e.m.i.launch.MavenLaunchDelegate - /Users/timmanas/ProgrammingProjects/CucumberFramework/CucumberFramework
+2021-01-04 00:02:37,365 [Worker-52: Launching Executing clean in _Users_timmanas_ProgrammingProjects_CucumberFramework_CucumberFramework] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean
+2021-01-04 00:02:48,197 [Worker-58: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2021-01-04 00:02:48,416 [Worker-58: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.automationframework:CucumberFramework:0.0.1-SNAPSHOT @ /Users/timmanas/ProgrammingProjects/CucumberFramework/CucumberFramework/pom.xml.
+2021-01-04 00:02:48,745 [Worker-58: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /CucumberFramework/src/main/java
+2021-01-04 00:02:48,745 [Worker-58: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /CucumberFramework/src/test/java
+2021-01-04 00:02:48,968 [Worker-58: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 0 sec
+2021-01-04 00:02:49,613 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-04 00:02:49,614 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/timmanas/ProgrammingProjects/CucumberFramework/CucumberFramework/src/main/resources
+2021-01-04 00:02:49,615 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-04 00:02:49,615 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/timmanas/ProgrammingProjects/CucumberFramework/CucumberFramework/src/test/resources
+2021-01-04 00:03:55,322 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-04 00:03:55,322 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/timmanas/ProgrammingProjects/CucumberFramework/CucumberFramework/src/main/resources
+2021-01-04 00:03:55,324 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-04 00:03:55,325 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/timmanas/ProgrammingProjects/CucumberFramework/CucumberFramework/src/test/resources
+2021-01-04 00:04:15,554 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-04 00:04:15,554 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/timmanas/ProgrammingProjects/CucumberFramework/CucumberFramework/src/main/resources
+2021-01-04 00:04:15,555 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-04 00:04:15,555 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/timmanas/ProgrammingProjects/CucumberFramework/CucumberFramework/src/test/resources
+2021-01-04 00:04:24,972 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-04 00:04:24,972 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/timmanas/ProgrammingProjects/CucumberFramework/CucumberFramework/src/main/resources
+2021-01-04 00:04:24,973 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-04 00:04:24,973 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/timmanas/ProgrammingProjects/CucumberFramework/CucumberFramework/src/test/resources
