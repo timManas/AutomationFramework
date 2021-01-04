@@ -1,0 +1,33 @@
+
+Q1. What is automation Framework ? 
+
+
+Q2. What is TestNG ?
+
+Q3. What is Maven ?
+
+Q4. What is the POM File ?
+
+Q. What makes TestNG different from JUnit ?
+
+Q. What do you need to download before starting ?
+- Java SDK
+- Apache Maven
+- Set up Environment variables for Windows  / Set up bash_profile for Mac
+	> JAVA_HOME, M2 ..etc
+- Download TestNG from Eclipse Marketplace
+- Download Cucumber, Natural 0.9
+- Download ChromeDriver 
+
+Q. How to create a maven project ? 
+- Go Create new Project
+- Go to "Other.."
+- Go to Maven > Create Maven Project
+- Use Default WorkStation Location > Next
+- Select  GroupId:  org.apache.maven.archetypes with ArtifactId: maven-archetype-quickstart > Next
+- GroupId: com.XYZ
+- ArtifiactId: NameOfApp
+- Package: NameOfApp (Remove com.XYZ)
+- Click on Finish
+
+Q. You will need to download Chromedriver & ChromeBrowser
