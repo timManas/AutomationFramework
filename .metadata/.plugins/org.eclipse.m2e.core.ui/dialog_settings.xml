@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="/Users/timmanas/ProgrammingProjects/CucumberFramework/CucumberFramework/Notes.txt"/>
 			<item value="/Users/timmanas/ProgrammingProjects/CucumberFramework"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -26,13 +27,10 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="CucumberFramework"/>
 		</list>
 		<list key="groupId">
-			<item value="com.automationframework"/>
 		</list>
 		<list key="artifactId">
-			<item value="CucumberFramework"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

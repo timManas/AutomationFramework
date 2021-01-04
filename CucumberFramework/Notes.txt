@@ -15,6 +15,7 @@ Q4. What is the POM File ?
 - Heart of Maven project
 - List of all dependencies to download from the web to get project running
 - Easily allows us the download project versions
+- When you update the pom file, you will need to re-install the project using "maven install"
 
 Q4b. What is dependency ?
 - Tool that allows to manage all libraries in a logical way
@@ -49,4 +50,82 @@ Q5. What makes TestNG different from JUnit ?
 - Run As > Maven  Install
 - If it works, you should see build succcessful
 
-10. 
+****10. How to update Project POM	
+- Right click on the “ProjectName” 
+- Click on Maven
+- Update Project
+- Click on the Checkbox with “Force Update of Snapshot/Releases’
+- Click Ok
+
+11. When you update the pom file, it downloads the jar files and places it in the .m2 folder
+
+12. If you delete the "repository" folder in the .m2 folder, you can redownload all the jar files by doing the update using Q10. above
+
+
+13. How to get install dependencies on pom ?
+- Go to Maven Repository on web ... https://mvnrepository.com/
+- Search for artifacts like Seleneium
+- Select version
+- Copy the Maven code into the pom file
+- Update the Project POM
+
+14. What is Gherkin ?
+- Programming language Cucumber understands
+- Business Readable / Domain Specific
+- Describes softwares behaviour without detailing how behaviour is implemented
+
+
+15. What is a feature file ? 
+- Capturing Business requirements
+- Contains Gherkin Keywords:
+Feature
+Scenario
+Given
+But
+Then
+And
+
+
+16. What is Step definitions ?
+- Java method with an expression that links it to a Gherkin Step
+
+Ex: 
+Scenario: Some cukes
+  Given I have 48 cukes in my belly
+  
+- 'Given' is a Gherkin keyword, and "I have 48 cukes in my belly" will match the step definition of:
+public class StepDefinitions {
+    @Given("I have {int} cukes in my belly")
+    public void i_have_n_cukes_in_my_belly(int cukes) {
+        System.out.format("Cukes: %n\n", cukes);
+    }
+}
+
+
+
+
+18. Flow is:
+Feature Files > Step Definitions (Java Code) > Selenium > ChromeDriver > Chrome
+
+19. How to create a feature file ?
+- New > File > NameOfFeature.feature  (make sure to add.feature)
+
+20. You are getting "Pending Exception" ? Remove it on the Steps definiition method
+
+21. If you have Step definitions for each step and you run the feature file, you should see 
+1 Scenarios (1 passed)
+6 Steps (6 passed)
+0m0.156s
+
+
+22. What is Runner Class ?
+- Can execute multiple feature files
+- Can also generate customize reports
+
+23. What is glue ? 
+- Middle stage which connects feature files
+
+
+24. How to execute the runner class ?
+- Right click on RunnerClass (ex. MainRunner.java)
+- Run As
