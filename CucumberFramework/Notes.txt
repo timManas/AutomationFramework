@@ -129,3 +129,40 @@ Feature Files > Step Definitions (Java Code) > Selenium > ChromeDriver > Chrome
 24. How to execute the runner class ?
 - Right click on RunnerClass (ex. MainRunner.java)
 - Run As
+
+25. What is monochrome ?
+26. What are tags ?
+27. What are plugins ?
+28. Why do we need the @RunWith(Cucumber.class) ?
+
+
+29. What is firebug ? 
+- Obsolete
+
+30. What is firepath ?
+- Obsolete
+
+31. What is ranorex ? 
+- Tool used to locate elements. 
+- Allows us to copy the xpath to a particular element
+
+
+32. What is gecko driver ?
+
+33. What is a hook ?
+- Before
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
