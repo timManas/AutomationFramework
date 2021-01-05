@@ -103,7 +103,6 @@ public class StepDefinitions {
 
 
 
-
 18. Flow is:
 Feature Files > Step Definitions (Java Code) > Selenium > ChromeDriver > Chrome
 
@@ -121,6 +120,7 @@ Feature Files > Step Definitions (Java Code) > Selenium > ChromeDriver > Chrome
 22. What is Runner Class ?
 - Can execute multiple feature files
 - Can also generate customize reports
+- Ability to generate method templates for our step classes
 
 23. What is glue ? 
 - Middle stage which connects feature files
@@ -153,8 +153,14 @@ Feature Files > Step Definitions (Java Code) > Selenium > ChromeDriver > Chrome
 - Before
 
 
+34. Where is the report located ?
+- target Folder
+- report.html
 
-
+35. You dont need Cucumber to run Selenium. I automated Selenium without cucumber in the MainNoCucumberRunner.java
+- Run this as java application
+- You should see Selenium running and inputting/outputting commands
+Note: Downside ... there is NO reporting once completed
 
 
 

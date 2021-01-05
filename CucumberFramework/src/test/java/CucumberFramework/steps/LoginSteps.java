@@ -23,11 +23,6 @@ public class LoginSteps {
 	@Before()
 	
 	public void setup() {
-//		System.setProperty("webdriver.gecko.driver", "/Users/timmanas/ProgrammingProjects/CucumberFramework/CucumberFramework/src/test/java/CucumberFramework/resources/geckodriver");
-//		this.driver = new FirefoxDriver();
-//		this.driver.manage().window().maximize();
-//		this.driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
-		
 		System.setProperty("webdriver.chrome.driver", "/Users/timmanas/ProgrammingProjects/CucumberFramework/CucumberFramework/src/test/java/CucumberFramework/resources/chromedriver");
 		this.driver = new ChromeDriver();
 		this.driver.manage().window().maximize();
