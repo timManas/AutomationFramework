@@ -16,7 +16,4 @@ Scenario: Submit valid data via contact us form
 	When I click on the submit button
 	Then the information should successfully be submitted via the contact us form
 	
-Scenario: Go To StackOverflow
-	And I go to StackOverFlow
-	
-	
+

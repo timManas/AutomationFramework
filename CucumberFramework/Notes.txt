@@ -207,3 +207,25 @@ OR
 		monochrome = true,
 		tags = {}, 
 		plugin = {"pretty", "html:target/cucumber", "html:target/cucumber.json", "com.cucumber.listener.ExtentCucumberFormatter:target/report.html"})
+		
+40. The "Background" Only applies to the current feature file. Does NOT apply to othe featuer files
+
+41. You can parameterize values in the step and it will appear as wild cards in the step definition
+Ex: And I enter a "webdriver123" password		
+This will show us:
+@When("^I enter a \"([^\"]*)\" password$")
+public void i_enter_a_password(String password) throws Throwable {
+	driver.findElement(By.id("password")).sendKeys(password); 
+}
+
+
+		
+42. Note: @Before runs before each Scenario
+
+43. Looks like creating more than one Step file is not a good idea. Better to make ONE master step file (ex: Steps.java)
+
+44. How to toggle between different tabs ? 
+String winHandlerBefore = driver.getWindowHandle()
+for(String winHandler: driver.getWindowHandles()) {
+			driver.switchTo().window(winHandler);
+}
