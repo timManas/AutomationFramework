@@ -164,11 +164,46 @@ Note: Downside ... there is NO reporting once completed
 
 
 
+36. Definitions
+Feature - Description of the feature file
+Background - Defines common steps across multiple scenarios
+	> Allows scenarios to run similar steps for each scenario (ex: Open Browser to the same site)
+	> Reduces code duplication by running each scenario with the Background keyword
+	> Used for Pre-Conditions
+
+Scenario - A feature file can have multiple scenarios
+		> Used to find our scenario amongst multiple scenarios
+Given - Precondition of a scenario
+When - Description of action which will be executed
+Then - Specific outcome from executing the last step
+And - Provides an additional condition to the step
+But - Negative conditions from the last executed Step 
+
+Scenario Outline - Enables data to be sent to scenarios using templates and examples
+Examples - Used alongside Scenario outlines
 
 
 
+37. You can create multiple scenarios inside a feature file
+- You can also seperate scenarios into multiple feature files
+
+38. Feature files need to have keyword: "Feature" at the top 
 
 
+39. When setting the glue, you will need to change it to the name of the Package
+Ex: 
+@CucumberOptions(
+		features = {"src/test/java/WebDriverU/Features/"},
+		glue = {"WebDriverU.steps"},
+		monochrome = true,
+		tags = {}, 
+		plugin = {"pretty", "html:target/cucumber", "html:target/cucumber.json", "com.cucumber.listener.ExtentCucumberFormatter:target/report.html"})
+		
+OR
 
-
-
+@CucumberOptions(
+		features = {"src/test/java/CucumberFramework/featureFiles/"},
+		glue = {"CucumberFramework.steps"},
+		monochrome = true,
+		tags = {}, 
+		plugin = {"pretty", "html:target/cucumber", "html:target/cucumber.json", "com.cucumber.listener.ExtentCucumberFormatter:target/report.html"})
