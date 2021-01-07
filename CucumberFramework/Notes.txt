@@ -229,3 +229,12 @@ String winHandlerBefore = driver.getWindowHandle()
 for(String winHandler: driver.getWindowHandles()) {
 			driver.switchTo().window(winHandler);
 }
+
+
+45. What are Data Tables ? 
+- Allows user to define multiple data as a table on a given step
+- The Step definition would have a "DataTable" object which can be map out the table
+- Then the step definition can extract the data from the datatable using a
+List<List<String>> data = comments.raw()
+
+

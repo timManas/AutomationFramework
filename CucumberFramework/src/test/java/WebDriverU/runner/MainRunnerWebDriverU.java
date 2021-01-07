@@ -8,7 +8,7 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 
 @CucumberOptions(
-		features = {"src/test/java/WebDriverU/Features/Login.feature"},
+		features = {"src/test/java/WebDriverU/Features/"},
 		glue = {"WebDriverU.steps"},
 		monochrome = true,
 		tags = {}, 

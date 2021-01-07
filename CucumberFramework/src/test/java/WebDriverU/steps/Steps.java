@@ -1,5 +1,6 @@
 package WebDriverU.steps;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;
@@ -8,6 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import cucumber.api.DataTable;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
@@ -56,11 +58,24 @@ public class Steps {
 	public void i_click_on_the_contact_us_button() throws Throwable {
 
 	}
-
+	
 	@When("^I enter a valid first name$")
 	public void i_enter_a_valid_first_name() throws Throwable {
-
+		
 	}
+
+	@When("^I enter a valid first name using DataTables$")
+	public void i_enter_a_valid_first_name_using_DataTables(DataTable dataTable) throws Throwable {
+		System.out.println("DataFrame Example");
+		List<List<String>> table = dataTable.raw();
+		for (int i=0; i < table.size(); i++) {
+			for (int j=0; j < table.get(i).size(); j++ ) {
+				System.out.println("Table Value: " + table.get(i).get(j));
+			}
+		}
+	}
+
+
 
 	@When("^I enter a valid last name$")
 	public void i_enter_a_valid_last_name() throws Throwable {

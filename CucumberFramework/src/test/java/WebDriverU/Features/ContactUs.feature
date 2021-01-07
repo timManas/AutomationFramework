@@ -16,4 +16,14 @@ Scenario: Submit valid data via contact us form
 	When I click on the submit button
 	Then the information should successfully be submitted via the contact us form
 	
+	
+Scenario: DataTable Testing
+	Given I access webdriveruniversity
+	And I enter a valid first name using DataTables
+	| Timothy | John | Tim | Random |
+	| Romero | Manas | ABC | XYZ |
+	When I click on the submit button
+	Then the information should successfully be submitted via the contact us form
+		
+	
 
