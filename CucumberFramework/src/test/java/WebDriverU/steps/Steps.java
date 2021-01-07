@@ -1,5 +1,7 @@
 package WebDriverU.steps;
 
+import static org.testng.Assert.assertEquals;
+
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -12,6 +14,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import cucumber.api.DataTable;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -154,6 +157,7 @@ public class Steps {
 
 	@When("^I enter a \"([^\"]*)\" password$")
 	public void i_enter_a_password(String password) throws Throwable {
+		System.out.println("Password: " + password);
 		driver.findElement(By.id("password")).sendKeys(password); 
 	}
 
@@ -184,13 +188,51 @@ public class Steps {
 		Assert.assertEquals(alert.getText(), "validation failed"); // Checks Value
 		alert.accept(); // Clicks on Ok Accept
 	}
+	
+	// Login using Scenario Outlines ============
 
+	
+	@Given("^user navigates to \"([^\"]*)\"$")
+	public void user_navigates_to(String url) throws Throwable {
+		driver.get(url);  //http://www.webdriveruniversity.com/
+	}
 
+	@When("^user clicks on the login portal button$")
+	public void user_clicks_on_the_login_portal_button() throws Throwable {
+		driver.findElement(By.id("login-portal")).click();
+	}
+
+	@And("^user enters the \"([^\"]*)\" username$")
+	public void user_enters_the_username(String username) throws Throwable {
+		System.out.println("Username: " + username);
+		//tab code
+		for (String windHandle : driver.getWindowHandles()) {
+			driver.switchTo().window(windHandle);
+		}
+		//send username keys
+		driver.findElement(By.id("text")).sendKeys(username);
+
+	}
+
+	@And("^user enter the \"([^\"]*)\" password$")
+	public void user_enter_the_password(String password) throws Throwable {
+		System.out.println("Password: " + password);
+		driver.findElement(By.id("password")).sendKeys(password);	
+	}
+
+	@When("^user clicks on the login button$")
+	public void user_clicks_on_the_login_button() throws Throwable {
+		driver.findElement(By.id("login-button")).click();
+	}
+
+	@Then("^the user should be presented with the following prompt alert \"([^\"]*)\"$")
+	public void the_user_should_be_presented_with_the_following_prompt_alert(String message) throws Throwable {
+		Alert alert = driver.switchTo().alert(); //Alert	
+		assertEquals(alert.getText().toString().toLowerCase().replaceAll("\\s", ""), message.toLowerCase().replaceAll("\\s", ""));
+		alert.accept();
+	}
+	
 	// ===================
 
-	@When("^I go to StackOverFlow$")
-	public void i_go_to_StackOverFlow() throws Throwable {
-		driver.get("https://www.stackoverflow.com/");
-	}
 
 }

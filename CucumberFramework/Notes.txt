@@ -238,3 +238,28 @@ for(String winHandler: driver.getWindowHandles()) {
 List<List<String>> data = comments.raw()
 
 
+46. What is Scenario Outlines ? 
+- Similar to a FOR LOOP
+- Runs each step with predefined parameters
+- Allows us to run test through each row of data
+- Once row is executed, it runs through the second row until the end 
+- In order to call, you will to be use "<xyz>" and this will refer to the column in the outline
+- Minimizes code duplication and saves time by repeating the steps 
+Note: This requires the use of "Examples:" 
+
+Ex: 
+Scenario Outline: Test Login to account with credentials using ScenarioOutlines
+	Given user navigates to "<url>" 
+	When user clicks on the login portal button
+	And user enters the "<username>" username
+	And user enter the "<password>" password
+	When user clicks on the login button
+	Then the user should be presented with the following prompt alert "<message>"
+	
+	
+	Examples:
+	| 	          url 					| 		username 		|		 password		 |		 message		 |
+	|http://www.webdriveruniversity.com/|	webdriver3			|		wendriver 		 | validation failed     |
+	|http://www.webdriveruniversity.com/|	webdriver			|		webdriver123	 | validation succeeded  |
+	
+
