@@ -349,6 +349,7 @@ Ex: Go to the Root Folder
 > You will see Both runners get executed sequentially
 
 Q56. What is the sure-fire plugin for ?
+- The Surefire Plugin is used during the test phase of the maven build lifecycle to execute the unit tests of an application. 
 
 57. How to execute our testng.xml (which targets multiple runner classes) from the command line:
 1. Set up your pom file to have the following: 
@@ -373,3 +374,9 @@ mvn clean compile install		(Creates a Jar File. Located in .m2 folder)
 Note: This is a mvn command. 
 
 
+58. What is <suiteXmlFiles> ?
+- List of <suiteXmlFiles> elements specifiying TestNG suite XML file locations.
+
+59. What is <testFailureIgnore> ?
+Set this to "true" to ignore a failure during testing. Its use is NOT RECOMMENDED, but quite convenient on occasion.
+Default value is: false.

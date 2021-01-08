@@ -205,8 +205,10 @@ public class Steps {
 	// Login using Scenario Outlines ============
 
 	
-	@Given("^user navigates to \"([^\"]*)\"$")
+//	@Given("^user navigates to \"([^\"]*)\"$")
+	@Given("^user navigates to \"(.*)\"$")
 	public void user_navigates_to(String url) throws Throwable {
+		System.out.println("(.*) Worked");
 		driver.get(url);  //http://www.webdriveruniversity.com/
 	}
 	
@@ -254,6 +256,7 @@ public class Steps {
 	public void access_Stackoverflow_using_FireFox() throws Throwable {
 		driver.get("https://stackoverflow.com/");
 		Thread.sleep(2000);
+		assertEquals(false, true);
 	}
 	
 	// TestNG.xml Execution Example: Run multiple Runners sequentially ===================

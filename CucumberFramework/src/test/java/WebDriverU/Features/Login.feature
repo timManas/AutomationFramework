@@ -21,7 +21,7 @@ Scenario: Login account with a invalid password
 
 @TagScenarioOutline
 Scenario Outline: Test Login to account with credentials using ScenarioOutlines
-	Given user navigates to "<url>" 
+	Given user navigates to "<url>"
 	When user clicks on the login portal button
 	And user enters the "<username>" username
 	And user enter the "<password>" password
