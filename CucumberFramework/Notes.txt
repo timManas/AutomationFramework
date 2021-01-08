@@ -348,4 +348,28 @@ Ex: Go to the Root Folder
 - Run as TestNG.
 > You will see Both runners get executed sequentially
 
+Q56. What is the sure-fire plugin for ?
+
+57. How to execute our testng.xml (which targets multiple runner classes) from the command line:
+1. Set up your pom file to have the following: 
+	<artifactId>maven-surefire-plugin</artifactId>
+	<version>2.22.1</version>
+	<configuration>
+		<suiteXmlFiles>
+			<suiteXmlFile>testng.xml</suiteXmlFile>
+		</suiteXmlFiles>
+		<testErrorIgnore>false</testErrorIgnore>
+		<testFailureIgnore>false</testFailureIgnore>
+	</configuration>
+
+
+2. Go to Commandline: Go to root Folder and type in:
+mvn clean compile test 
+OR 
+mvn clean compile verify 
+OR 
+mvn clean compile install		(Creates a Jar File. Located in .m2 folder)
+
+Note: This is a mvn command. 
+
 
