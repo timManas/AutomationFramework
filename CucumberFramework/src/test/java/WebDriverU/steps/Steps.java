@@ -10,6 +10,7 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import cucumber.api.DataTable;
 import cucumber.api.java.After;
@@ -32,7 +33,7 @@ public class Steps {
 		this.driver.manage().window().maximize();
 		this.driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
 
-		System.out.println("Finished Steps Setup");
+		System.out.println("Finished setup()");
 	}
 
 	@After
@@ -42,6 +43,18 @@ public class Steps {
 			driver.quit();
 			driver = null;
 		}
+	}
+	
+	// Hooks Combine with Tags =======
+	@Before("@HookTagCombination")
+	public void setupHookTagCombo() {
+		System.setProperty("webdriver.chrome.driver",
+				"/Users/timmanas/ProgrammingProjects/CucumberFramework/CucumberFramework/src/test/java/CucumberFramework/resources/chromedriver");
+		this.driver = new ChromeDriver();
+		this.driver.manage().window().maximize();
+		this.driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+
+		System.out.println("Finished setupHookTagCombo()");
 	}
 	
 	// Contact Us ===========
@@ -236,7 +249,21 @@ public class Steps {
 		alert.accept();
 	}
 	
+	// Hooks Combine with Tags Example ===================
+	@Given("^Access Stackoverflow using Chrome$")
+	public void access_Stackoverflow_using_FireFox() throws Throwable {
+		driver.get("https://stackoverflow.com/");
+		Thread.sleep(2000);
+	}
+	
+	// TestNG.xml Execution Example: Run multiple Runners sequentially ===================
+	@When("^I click on the ButtonClicks$")
+	public void i_click_on_the_ButtonClicks() throws Throwable {
+		driver.findElement(By.xpath("/html//a[@id='button-clicks']//h1[.='BUTTON CLICKS']")).click();
+		System.out.println("Clicked on ButtonClick");
+		Thread.sleep(2000);
+	}
+	
 	// ===================
-
 
 }

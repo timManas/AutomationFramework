@@ -324,5 +324,28 @@ monoChrome - Boolean: - Alters the output of the console window by making it rea
 plugin - Create and develop specific reports (Ex. Html, JSON or Extent report)
 
 
+49. What are Tags ?
+- Enable user to target specific feature files and Scenarios
+
+50. You can combine Tags with Hooks 
+Ex:
+@Before("@smoke")
+
+51. @Before() Runs before @Before("@TagXYZ"). ALWAYS
+
+52. We can have multiple Runner Classes. But, when we can only run/execute one runner class at a time
+
+53. Each Runner Class can target a specific package
+
+54. You can use testNG to execute MULTIPLE runner classes sequentially
+
+
+55. Why use testNG to execute ? 
+- Instead of running each RunnerClass individually, we can just run the testng.xml to execute both sequentially
+- Becomes Central point of Execution
+Ex: Go to the Root Folder
+- Right click on testng.xml
+- Run as TestNG.
+> You will see Both runners get executed sequentially
 
 
