@@ -196,11 +196,13 @@ public class Steps {
 	public void user_navigates_to(String url) throws Throwable {
 		driver.get(url);  //http://www.webdriveruniversity.com/
 	}
+	
 
 	@When("^user clicks on the login portal button$")
 	public void user_clicks_on_the_login_portal_button() throws Throwable {
 		driver.findElement(By.id("login-portal")).click();
 	}
+	
 
 	@And("^user enters the \"([^\"]*)\" username$")
 	public void user_enters_the_username(String username) throws Throwable {
@@ -209,8 +211,8 @@ public class Steps {
 		for (String windHandle : driver.getWindowHandles()) {
 			driver.switchTo().window(windHandle);
 		}
-		//send username keys
-		driver.findElement(By.id("text")).sendKeys(username);
+		
+		driver.findElement(By.id("text")).sendKeys(username);	//send username keys
 
 	}
 
@@ -219,11 +221,13 @@ public class Steps {
 		System.out.println("Password: " + password);
 		driver.findElement(By.id("password")).sendKeys(password);	
 	}
+	
 
 	@When("^user clicks on the login button$")
 	public void user_clicks_on_the_login_button() throws Throwable {
 		driver.findElement(By.id("login-button")).click();
 	}
+	
 
 	@Then("^the user should be presented with the following prompt alert \"([^\"]*)\"$")
 	public void the_user_should_be_presented_with_the_following_prompt_alert(String message) throws Throwable {

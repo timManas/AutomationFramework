@@ -124,6 +124,7 @@ Feature Files > Step Definitions (Java Code) > Selenium > ChromeDriver > Chrome
 
 23. What is glue ? 
 - Middle stage which connects feature files
+- Location of Step Files
 
 
 24. How to execute the runner class ?
@@ -131,9 +132,22 @@ Feature Files > Step Definitions (Java Code) > Selenium > ChromeDriver > Chrome
 - Run As
 
 25. What is monochrome ?
+monoChrome - Boolean: - Alters the output of the console window by making it readable or non readable
+
 26. What are tags ?
+tags - Target specific tests
+
 27. What are plugins ?
+plugin - Create and develop specific reports (Ex. Html, JSON or Extent report)
+
 28. Why do we need the @RunWith(Cucumber.class) ?
+- Mandatory for running Cucumber
+
+ 
+28. What is dryRun ?
+dryRun - Boolean: True - Check whether matching steps are visible but will NOT execute the code within the steps
+
+
 
 
 29. What is firebug ? 
@@ -220,7 +234,8 @@ public void i_enter_a_password(String password) throws Throwable {
 
 
 		
-42. Note: @Before runs before each Scenario
+42. Note: @Before runs before each Scenario. Hence if you have 5 scenarios in a Feature File,
+Then @Before will run 5 times since there are 5 scenarios
 
 43. Looks like creating more than one Step file is not a good idea. Better to make ONE master step file (ex: Steps.java)
 
@@ -262,4 +277,52 @@ Scenario Outline: Test Login to account with credentials using ScenarioOutlines
 	|http://www.webdriveruniversity.com/|	webdriver3			|		wendriver 		 | validation failed     |
 	|http://www.webdriveruniversity.com/|	webdriver			|		webdriver123	 | validation succeeded  |
 	
+
+47. What are hooks ?
+- Blocks of code that can run at various points in Cucumber Life Cycle
+- Typically used for setup and teardown of environment befor and after each scenario
+- Enhance our test cases
+- Can attach images to reports using Hooks
+@Before - Gets executed for each scenario
+@After - Gets executed after each scenario
+
+Multiple types of Hooks
+Scenario Hooks:
+- @Before
+- @After
+
+Step Hooks:
+- @BeforeStep
+- @AfterStep
+
+Conditional Hooks:
+- @After("@browser and not @headless")
+public void doSomethingAfter(Scenario scenario){
+}
+
+
+48. What are Cucumber Options ? 
+- Mandatory to have  "@RunWith(XYZ_NameOfClass.class)
+- Settings for the Runner Class
+
+Ex: 
+@CucumberOptions(
+		features = {"src/test/java/WebDriverU/Features/Login.feature"},				// Location of feature Files
+		glue = {"WebDriverU.steps"},											Í	// Glue - Steo Definitions
+		monochrome = true,
+		tags = {}, 
+		plugin = {"pretty", "html:target/cucumber", "html:target/cucumber.json", "com.cucumber.listener.ExtentCucumberFormatter:target/report.html"})
+
+Note:
+features - Location of feature files
+glue - Location of Step Files
+tags - Target specific tests
+> Filters only the test we want to run ... aka we tag only the scenarios we want to run
+
+dryRun - Boolean: True - Check whether matching steps are visible but will NOT execute the code within the steps
+monoChrome - Boolean: - Alters the output of the console window by making it readable or non readable
+plugin - Create and develop specific reports (Ex. Html, JSON or Extent report)
+
+
+
 
