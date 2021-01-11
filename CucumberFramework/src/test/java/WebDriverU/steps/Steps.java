@@ -8,11 +8,14 @@ import java.util.concurrent.TimeUnit;
 import org.junit.Assert;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import cucumber.api.DataTable;
+import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
@@ -36,13 +39,28 @@ public class Steps {
 		System.out.println("Finished setup()");
 	}
 
+	
 	@After
-	public void tearDown() {
-		if (driver != null) {
-			driver.manage().deleteAllCookies();
-			driver.quit();
-			driver = null;
+	public void tearDown(Scenario scenario) throws InterruptedException {
+
+		try {
+			// Adds Screenshot Capabilities using driver
+			if (driver != null && scenario.isFailed()) {
+				scenario.embed(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES), "image/png");
+			}
+
+			if (driver != null) {
+				driver.manage().deleteAllCookies();
+				driver.quit();
+				driver = null;
+			}
+
+		} catch (
+
+		Exception e) {
+			System.out.println("Error: " + e);
 		}
+
 	}
 	
 	// Hooks Combine with Tags =======

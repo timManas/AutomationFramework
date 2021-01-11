@@ -379,4 +379,38 @@ Note: This is a mvn command.
 
 59. What is <testFailureIgnore> ?
 Set this to "true" to ignore a failure during testing. Its use is NOT RECOMMENDED, but quite convenient on occasion.
+
+
+
+Q60. What is DesiredCapabilities ? 
 Default value is: false.
+
+
+
+61. How to add screenshot capabilities when we get a failed testcase ? 
+- Here is an example of the code
+	@After
+	public void tearDown(Scenario scenario) throws InterruptedException {
+		try {
+			// Adds Screenshot Capabilities using driver
+			if (driver != null && scenario.isFailed()) {
+				scenario.embed(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES), "image/png");
+			}
+			
+			if (driver != null) {
+				driver.manage().deleteAllCookies();
+				driver.quit();
+				driver = null;
+			}
+		} catch (Exception e) {
+			System.out.println("Error: " + e);
+		}
+
+	}
+
+
+
+
+
+
+
